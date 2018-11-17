@@ -30,8 +30,8 @@ function hideForm(){
 
 function editTable(){
     currentTR.children[1].innerHTML = document.getElementById('edit-name').value;
-    currentTR.children[3].innerHTML = document.getElementById('edit-email').value;
     currentTR.children[2].innerHTML = document.getElementById('edit-address').value;
+    currentTR.children[3].innerHTML = document.getElementById('edit-email').value;
 }
 
 
@@ -47,7 +47,7 @@ function removeOrEdit(e){
         document.getElementById('edit-name').value = currentTR.children[1].innerHTML;
         document.getElementById('edit-email').value = currentTR.children[3].innerHTML;
         document.getElementById('edit-address').value = currentTR.children[2].innerHTML;
-    }
+    }	
 
 
 }
@@ -55,6 +55,7 @@ function removeOrEdit(e){
 function createStudent(){
     let countChild = table.children.length;
     countChild++;
+	formEdit.style.display = 'none';
 
     let name = document.getElementById('add-name').value;
     let email = document.getElementById('add-email').value;
@@ -63,8 +64,8 @@ function createStudent(){
     tr.innerHTML = `
         <th scope="row">${countChild}</th>
         <td>${name}</td>
-        <td>${email}</td>
         <td>${address}</td>
+		<td>${email}</td>
         <td>
           <button class="btn-element btn-edit">Edit</button>
           <button class="btn-element btn-delete">Delete</button>
