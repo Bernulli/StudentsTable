@@ -8,23 +8,34 @@ const addEditStudent = document.getElementById('btn-add-form-edit');
 const cancelBtnAdd = document.getElementById('btn-cancel-form-add');
 const cancelBtnEdit = document.getElementById('btn-cancel-form-edit');
 let currentTR;
+const closeModal = document.getElementById('closeModal');
+
+const modal = document.getElementById('modalWindow');
 
 // event listeners
 btnShowForm.addEventListener('click', showAddForm);
 addStudent.addEventListener('click', createStudent);
-cancelBtnAdd.addEventListener('click', hideForm);
+// cancelBtnAdd.addEventListener('click', hideForm);
 cancelBtnEdit.addEventListener('click', hideForm);
 table.addEventListener('click', removeOrEdit);
 addEditStudent.addEventListener('click', editTable);
+closeModal.addEventListener('click', closeModalWindow);
 
 
 // functions
+function closeModalWindow(){
+    modal.style.display = 'none';
+}
+
+
 function showAddForm(){
-    formAdd.style.display = 'block';
+    //formAdd.style.display = 'block';
+    let modalBody = document.getElementById('modalBody');
+    modal.style.display = 'block';
 }
 
 function hideForm(){
-    formAdd.style.display = 'none';
+    //formAdd.style.display = 'none';
     formEdit.style.display = 'none';
 }
 
@@ -40,7 +51,7 @@ function removeOrEdit(e){
         e.target.parentElement.parentElement.remove();
     }
     else if(e.target.classList.contains('btn-edit')){
-        formAdd.style.display = 'none';
+        //formAdd.style.display = 'none';
         formEdit.style.display = 'block';
 
         currentTR = e.target.parentElement.parentElement;
