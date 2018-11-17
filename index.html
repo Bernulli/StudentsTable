@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="main-header">
+        <div class="wrapper header-wrapper">
+            <div class="main-header-container">
+                <div class="left-image-block">
+                    <span class="app-name">SymphArt</span>
+                </div>
+
+                <div class="right-nav-block">
+                    <nav class="header-navigation-menu">
+                        <ul class="navigation-list">
+                            <li class="navigation-element"><a href="#">Home</a></li>
+                            <li class="navigation-element"><a href="#">New Article</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="wrapper">
+        <button id="btn-showForm" class="add-student-form-button">Add Student</button>
+        <table id="student-table" class="table table-hover table-striped">
+            <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Student Name</th>
+                <th scope="col">Address</th>
+                <th scope="col">Email</th>
+                <th scope="col">Manage</th>
+            </tr>
+            </thead>
+            <tbody id="table-tbody">
+            <tr>
+                <th scope="row">1</th>
+                <td class="name">Mark</td>
+                <td class="email">Otto</td>
+                <td class="address">@mdo</td>
+                <td>
+                    <button class="btn-element btn-edit">Edit</button>
+                    <button class="btn-element btn-delete">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td class="name">Jacob</td>
+                <td class="email">Thornton</td>
+                <td class="address">@fat</td>
+                <td>
+                    <button class="btn-element btn-edit">Edit</button>
+                    <button class="btn-element btn-delete">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td class="name">Larry</td>
+                <td class="email">the Bird</td>
+                <td class="address">@twitter</td>
+                <td>
+                    <button class="btn-element btn-edit">Edit</button>
+                    <button class="btn-element btn-delete">Delete</button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <section id="form-add-student" class="form-add-block">
+            <span class="form-header">Add Student</span>
+            <form class="form-add-elements" action="">
+                <div class="label-block">
+                    <label for="add-name">Name:</label><br>
+                    <label for="add-email">Email:</label><br>
+                    <label for="add-address">Address:</label><br>
+                </div>
+                <div class="input-block">
+                    <input id="add-name" type="text"><br>
+                    <input id="add-email" type="text"><br>
+                    <input id="add-address" type="text"><br>
+                </div>
+            </form>
+            <div class="btn-block">
+                <button id="btn-add-form-add" class="btn-form-add btn-element">Add</button>
+                <button id="btn-cancel-form-add" class="btn-form-cancel btn-element">Cancel</button>
+            </div>
+        </section>
+        <section id="form-edit-student" class="form-edit-block">
+            <span class="form-header">Edit Student</span>
+            <form class="form-edit-elements" action="">
+                <div class="label-block">
+                    <label for="edit-name">Name:</label><br>
+                    <label for="edit-email">Email:</label><br>
+                    <label for="edit-address">Address:</label><br>
+                </div>
+                <div class="input-block">
+                    <input id="edit-name" type="text"><br>
+                    <input id="edit-email" type="text"><br>
+                    <input id="edit-address" type="text"><br>
+                </div>
+            </form>
+            <div class="btn-block">
+                <button id="btn-add-form-edit" class="btn-form-add btn-element">Add</button>
+                <button id="btn-cancel-form-edit" class="btn-form-cancel btn-element">Cancel</button>
+            </div>
+        </section>
+    </main>
+    <script src="js/main.js"></script>
+</body>
+</html>
